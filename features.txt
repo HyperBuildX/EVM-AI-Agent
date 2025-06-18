@@ -1,0 +1,5 @@
+# tasks
+privy, limiting prompts - 600
+multi chain - 300
+solidity ai generation - 800
+ui - 150
