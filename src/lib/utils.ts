@@ -7,7 +7,11 @@ import { CoreMessage, CoreToolMessage, ToolInvocation } from "ai";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
+/**
+ * 
+ * @param param0 toolMessage: CoreToolMessage, messages: Message[]
+ * @returns Message[]
+ */
 function addToolMessageToChat({
   toolMessage,
   messages,
@@ -41,6 +45,11 @@ function addToolMessageToChat({
   });
 }
 
+/**
+ * 
+ * @param messages : CoreMessage
+ * @returns Array<Message>
+ */
 export function convertToUIMessages(
   messages: Array<CoreMessage>
 ): Array<Message> {
@@ -83,6 +92,11 @@ export function convertToUIMessages(
   }, []);
 }
 
+/**
+ * 
+ * @param messages 
+ * @returns 
+ */
 export function getTitleFromChat(messages: Array<CoreMessage>) {
   const uiMessages = convertToUIMessages(messages);
   const firstMessage = uiMessages[0];
